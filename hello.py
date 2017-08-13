@@ -5,5 +5,5 @@ def app(environ, start_response):
     ]
     start_response(status, response_headers)
     resp = environ['QUERY_STRING'].split("&")
-    resp = [item+"\r\n" for item in resp]
+    resp = [item+"\n" for item in resp]
     return resp
